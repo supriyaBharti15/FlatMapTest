@@ -1,5 +1,10 @@
 package com.example.flatmaptest.model;
 
+import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
+
+import com.bumptech.glide.Glide;
 import com.google.gson.annotations.SerializedName;
 
 public class Data{
@@ -57,6 +62,16 @@ public class Data{
 
 	public String getEmail(){
 		return email;
+	}
+
+	/*
+	method to set image to the xml
+	 */
+	@BindingAdapter({"android:avatar"})
+	public static void loadImage(ImageView view,String url){
+		Glide.with(view.getContext())
+				.load(url)
+				.into(view);
 	}
 
 	@Override
