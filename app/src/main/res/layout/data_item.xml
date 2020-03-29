@@ -6,11 +6,15 @@
         <variable
             name="allUserData"
             type="com.example.flatmaptest.model.Data" />
+        <variable
+            name="onItemClicked"
+            type="com.example.flatmaptest.listeners.OnItemClickListener" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="@{()->onItemClicked.onItemClicked(allUserData)}"
         android:orientation="horizontal">
 
         <ImageView
