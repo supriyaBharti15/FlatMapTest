@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+<variable
+    name="singleUserData"
+    type="com.example.flatmaptest.model.Data" />
     </data>
 
     <LinearLayout
@@ -18,8 +20,9 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher"
             android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
             tools:layout_editor_absoluteX="159dp"
             tools:layout_editor_absoluteY="16dp" />
 
@@ -28,19 +31,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="name" />
+            android:text="@{singleUserData.firstName}" />
 
         <TextView
             android:id="@+id/textView"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
-            android:text="asc@g.com"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{singleUserData.email}" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginTop="5dp"
-            android:background="@color/colorAccent"/>
+            android:background="@color/colorAccent" />
 
 
     </LinearLayout>
